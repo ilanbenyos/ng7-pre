@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from './data.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <app-nav [title]='title'></app-nav>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  `,
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'ng7-pre';
+export class AppComponent implements OnInit {
+  constructor(private data: DataService) { }
+  title = 'המשחק של זוהר';
+  ngOnInit() {
+    this.data.initScore()
+  }
 }
