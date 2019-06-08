@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './state/reducers/tutorial.reducer';
+
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +14,9 @@ import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { ReadComponent } from './tutorials/read/read.component';
+import { CreateComponent } from './tutorials/create/create.component';
+import { TutorialsComponent } from './tutorials/tutorials.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,10 @@ import { HomeComponent } from './home/home.component';
     AboutComponent,
     NavComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    ReadComponent,
+    CreateComponent,
+    TutorialsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +36,9 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
+    StoreModule.forRoot({
+      tutorial: reducer
+    })
 
   ],
   providers: [],

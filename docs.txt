@@ -1,1 +1,3 @@
 image search: https://pixabay.com/api/docs/
+
+https://coursetro.com/posts/code/151/Angular-Ngrx-Store-Tutorial---Learn-Angular-State-Management => ngrx
