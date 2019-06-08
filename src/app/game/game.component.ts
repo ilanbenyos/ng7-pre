@@ -23,9 +23,9 @@ interface ApiRes {
     <div class="page game d-flex align-items-center flex-column">
       <div class="panel w-100 d-flex justify-content-between mb-3">
         <div class="form-group col-md-4">
-        <select class="lang-select form-control" (change)="changeLang($event)">
-          <option *ngFor="let item of langs" value="{{item.val}}">{{item.name}}</option>
-        </select>
+          <select class="lang-select form-control" (change)="changeLang($event)">
+            <option *ngFor="let item of langs" value="{{item.val}}">{{item.name}}</option>
+          </select>
       </div>
 
         <div class="score h4 d-flex row">
@@ -38,7 +38,7 @@ interface ApiRes {
       <div class="panel justify-content-center"
            *ngIf="possibleAnswers.length>0">
         <button type="button"
-                class="btn btn-primary m-2"
+                class="btn btn-primary h2 m-2"
                 *ngFor="let answer of possibleAnswers"
                 (click)="clicked(answer)">
           {{ answer[lang] }}
