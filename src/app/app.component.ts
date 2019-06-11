@@ -4,7 +4,8 @@ import {DataService} from './data.service';
 @Component({
   selector: 'app-root',
   template: `
-    <app-nav [title]='title'></app-nav>
+    <app-nav [title]='title' classs="nav"></app-nav>
+    <app-header></app-header>
     <section>
       <router-outlet></router-outlet>
     </section>
@@ -13,7 +14,7 @@ import {DataService} from './data.service';
 })
 export class AppComponent implements OnInit {
   constructor(private data: DataService) { }
-  title = 'המשחק של זוהר';
+  title = 'Merkury';
   ngOnInit() {
     this.data.initScore()
   }
