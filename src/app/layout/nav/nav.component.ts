@@ -3,23 +3,30 @@ import { Component, OnInit,  EventEmitter, Input, Output  } from '@angular/core'
 @Component({
   selector: 'app-nav',
   template:`
-  <header>
-  <div class="nav py-2">
-    <a routerLink="/" class="logo">{{ title }}</a>
-    <i class="material-icons">home</i>
-
-    <nav>
-      <ul>
-        <li *ngFor="let item of links; let i = index">
-          <a routerLink="{{item.id}}">
-            <i class="material-icons">{{item.icon}}</i>
-            {{item.id}}
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="nav-app">
+      <div class="overlay" 
+           (click)="toggleNav()" 
+           [ngClass]="isNav ? 'is-nav': ''">{{isNav}}
+      </div>
+      <div class="nav py-2 d-flex flex-column" 
+           [ngClass]="isNav ? 'is-nav': ''">
+      <div class="logo py-3 px-4 d-flex">
+        <i class="material-icons">home</i>
+        <div class="title ml-2 h3">{{ title }}</div>
+      </div>
+      
+      <ul class="d-flex flex-column">
+          <li *ngFor="let item of links; let i = index" 
+              class="p-3" 
+              (click)="toggleNav()" >
+            <a routerLink="{{item.id}}" class="d-flex">
+              <i class="material-icons icon">{{item.icon}}</i>
+              <span class="link-to ml-2">{{item.id}}</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    </div>
   `,
   styleUrls: ['./nav.component.scss']
 })
@@ -28,6 +35,9 @@ export class NavComponent implements OnInit {
 
   constructor() { }
   @Input()  title: string;
+  @Input() isNav: boolean;
+  @Output() emitter: EventEmitter<any[]> = new EventEmitter();
+
   ngOnInit() {
     this.links=[
       {id:'home',icon:'home'},
@@ -37,5 +47,8 @@ export class NavComponent implements OnInit {
       {id:'users',icon:'perm_identity'},
       {id:'settings',icon:'settings'},
     ]
+  }
+  toggleNav() {
+    this.emitter.emit();
   }
 }

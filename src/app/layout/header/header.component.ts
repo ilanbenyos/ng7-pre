@@ -1,29 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
+import {Store} from '@ngrx/store';
 
 @Component({
   selector: 'app-header',
-  // templateUrl: './header.component.html',
   template:`
-  <div class="header p-3 d-flex justify-content-between">
-    <div class="left">
-      <i class="material-icons">menu</i>
-      <i class="material-icons">search</i>
+  <div class="header py-4 px-5 d-flex justify-content-between">
+    <div class="left d-flex align-items-center">
+      <i class="material-icons rol-btn" (click)="toggleNav()">menu</i>
+      <i class="material-icons rol-btn ml-3">search</i>
     </div>
-    <div class="rigth">
-      <i class="material-icons">search</i>
-      <i class="material-icons">notifications</i>
-      <i class="material-icons">email</i>
+    <div class="rigth d-flex align-items-center" *ngIf="user">
+      <div class="btn h6 text-white py-1 px-3 mr-4 font-weight-bold">+ Add project</div>
+      <div class="email d-inline-block position-relative">
+        <i class="material-icons rol-btn ml-3">email</i>
+        <span class="icon-badge badge ">{{user.messages.length}}</span>
+      </div>
+      <div class="notifications d-inline-block position-relative">
+        <i class="material-icons rol-btn ml-3">notifications</i>
+        <span class="icon-badge badge">4</span>
+      </div>
+        <div class="avatar ml-5 rol-btn" *ngIf="user">
+          <img [src]="user.img">
+        </div>
     </div>
-
   </div>
   `,
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output() emitter: EventEmitter<any[]> = new EventEmitter();
+  @Input() user: object;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-  }
 
+  }
+  toggleNav() {
+    this.emitter.emit();
+  }
 }

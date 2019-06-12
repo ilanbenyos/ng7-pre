@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { DataService } from '../data.service';
+import {Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-home',
@@ -7,17 +8,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  users: object;
-
-  constructor(private data: DataService) { }
+  user:any;
+  constructor(private data: DataService ,private store: Store<any>) { }
 
   ngOnInit() {
-    this.data.getUsers().subscribe(data => {
-        this.users = data
-        console.log(this.users);
-      }
-    );
+    this.user = this.data.getUser();
   }
 
 }

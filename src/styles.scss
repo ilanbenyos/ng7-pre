@@ -3,6 +3,7 @@
 body, html {
   height: 100%;
   margin: 0 auto;
+  background-color: ghostwhite;
 }
 
 body {
@@ -27,7 +28,21 @@ a {
 }
 
 section {
-  width: 80%;
-  margin: 0 auto;
-  padding: 2em;
+  //width: 80%;
+  //margin: 0 auto;
+  //padding: 2em;
+}
+
+
+.rol-btn{
+  cursor: pointer;
+}
+.icon-badge{
+  position:absolute;
+}
+.avatar{
+  img {
+    border-radius: 50%;
+    width: 3rem;
+  }
 }

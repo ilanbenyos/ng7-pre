@@ -1,9 +1,20 @@
-<h1>Users</h1>
+<div class="home d-flex flex-column" *ngIf="user">
+<h1 >Hello {{user.name}}</h1>
+<section class="graph d-flex ">
+  <div class="sales bg-primary border"></div>
+  <div class="reports bg-success border ml-4"></div>
 
-<ul *ngIf="users">
-  <li *ngFor="let user of users.data">
-    <img [src]="user.avatar">
-    <p>{{ user.first_name }} {{ user.last_name }}</p>
-  </li>
-</ul>
+</section>
+<section class="boxes d-flex">
+  <div class="tasks">
+    <app-block-header
+      title="Tasks"
+      [successCount]='user.tasks.length'
+      [errorCount]='user.tasks.length'
+    >
+    </app-block-header>
 
+  </div>
+
+</section>
+</div>

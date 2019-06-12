@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Observable} from 'rxjs';  // Import it up here
 
 @Injectable({
   providedIn: 'root'
@@ -9,34 +8,82 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers() {
-    return this.http.get('https://reqres.in/api/users');
+  initUser(){
+    return user
   }
+  getUser(){
+    return user
+  }
+}
 
-  getImages(word){
-    const key = `12694562-f15cb07609de14d31896535ec`;
-    const str = `https://pixabay.com/api/?key=${key}&q=${word}&image_type=photo&pretty=true`;
-    return this.http.get(str);
-  }
-  addScore(addScore: number){
-    const score = addScore + this.getScore()
-    this.setScore(score);
-
-    return score;
-  }
-  getScore(){
-    return  +window.localStorage.getItem('score')
-  }
-  initScore(){
-    let score = this.getScore()
-    if(typeof Number(score) !== 'number') {
-      score = 0;
-    }
-    if(!score){
-      this.setScore(0);
-    }
-  }
-  setScore(setScore: number){
-    window.localStorage.setItem('score', '' + setScore );
-  }
+const user={
+  name: 'John',
+  img:'https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg',
+  tasks:[
+    {
+      id:11,
+      txt:'new site for Symo.com',
+      date:1560256719206,
+    },{
+      id:12,
+      txt:'new logo for yossi',
+      date:1560277719206,
+    },{
+      id:14,
+      txt:'free business PSD Template',
+      date:1560256754206,
+    },
+  ],
+  messages:[
+    {
+      from:'Nina Jones',
+      img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+      msg:'Hey there! it\'s me again:-)',
+      date:1560991219206,
+    }, {
+      from:'Jones Dave',
+      img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+      msg:'hellllow! could you bring some coffie?',
+      date:1560997719206,
+    }, {
+      from:'Dave solomon',
+      img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+      msg:'good mornin! you are fired!!',
+      date:1560999919206,
+    },, {
+      from:'Noam turbo',
+      img:'https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg',
+      msg:'when will you be here?',
+      date:1560993211206,
+    },
+  ],
+  ctivities:[
+    [
+      {
+        from:'Nina Jones',
+        img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+        msg:'free ui kit',
+        action:'commented project',
+        date:1560995419206,
+      },{
+        from:'Noam turbo',
+        img:'https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg',
+        msg:'added new project',
+        action:'free psd (...)',
+        date:1560991975206,
+      },{
+        from:'Jones Dave',
+        img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+        msg:'uploaded vids & pics',
+        action:'ended today!',
+        date:1560991333206,
+      },{
+        from:'Jones Dave',
+        img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+        msg:'started a new position',
+        action:'at wix.com',
+        date:1560991777206,
+      },
+    ]
+  ]
 }

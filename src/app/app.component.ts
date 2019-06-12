@@ -1,21 +1,34 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from './data.service';
+import * as actions from './state/actions/tutorial.actions';
+import { Store } from '@ngrx/store';
+import { AppState } from './app.state';
 
 @Component({
   selector: 'app-root',
   template: `
-    <app-nav [title]='title' classs="nav"></app-nav>
-    <app-header></app-header>
-    <section>
+    <app-nav [title]='title' 
+             class="nav"
+             (emitter)="toggleNav()"
+             [isNav]='isNav'
+             ></app-nav>
+    <app-header (emitter)="toggleNav()" [user]="user"></app-header>
+    <div class="page p-4">
       <router-outlet></router-outlet>
-    </section>
+    </div>
   `,
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private data: DataService) { }
+  constructor(private data: DataService, private store: Store<AppState>) { }
   title = 'Merkury';
+  user:any;
+  isNav:boolean;
   ngOnInit() {
-    this.data.initScore()
+    this.user = this.data.getUser();
+    this.isNav =false;
+  }
+  toggleNav(){
+    this.isNav = !this.isNav
   }
 }
