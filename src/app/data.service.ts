@@ -37,7 +37,7 @@ const user={
   messages:[
     {
       from:'Nina Jones',
-      img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+      img:'https://ichef.bbci.co.uk/news/660/cpsprodpb/FD27/production/_101970846_aubreyblanche.jpg',
       msg:'Hey there! it\'s me again:-)',
       date:1560991219206,
     }, {
@@ -47,7 +47,7 @@ const user={
       date:1560997719206,
     }, {
       from:'Dave solomon',
-      img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+      img:'https://i.kinja-img.com/gawker-media/image/upload/s--rc0zysTU--/c_scale,f_auto,fl_progressive,q_80,w_800/xq47qve5n1mlmpvqlxca.jpg',
       msg:'good mornin! you are fired!!',
       date:1560330665151,
     },{
@@ -60,7 +60,7 @@ const user={
   activities:[
       {
         from:'Nina Jones',
-        img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+        img:'https://uploads.guim.co.uk/2017/10/06/Arwa_Mahdawi,_L.png',
         msg:'free ui kit',
         action:'commented project',
         date:1560995419206,
@@ -78,7 +78,7 @@ const user={
         date:1560330611151,
       },{
         from:'Jones Dave',
-        img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
+        img:'https://ichef.bbci.co.uk/news/660/cpsprodpb/FD27/production/_101970846_aubreyblanche.jpg',
         msg:'started a new position',
         action:'at wix.com',
         date:1560330690151,

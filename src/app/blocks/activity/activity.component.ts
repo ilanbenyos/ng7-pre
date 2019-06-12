@@ -21,7 +21,7 @@ import {Component, Input, OnInit} from '@angular/core';
             <span class="msg ml-1 ">{{activity.msg}}</span>
           </span>
 
-          <span class="bottom mt-1">
+          <span class="bottom mt-1 text-secondary">
             <i class="material-icons font-xm rol-btn text-secondary">access_time</i>
             <span class="date ml-2" >{{activity.date | getTimeAgo}}</span>
           </span>
