@@ -4,7 +4,7 @@ import {Store} from '@ngrx/store';
 @Component({
   selector: 'app-header',
   template:`
-  <div class="header py-4 px-5 d-flex justify-content-between">
+  <div class="header py-4 px-5 d-flex justify-content-between block-border">
     <div class="left d-flex align-items-center">
       <i class="material-icons rol-btn" (click)="toggleNav()">menu</i>
       <i class="material-icons rol-btn ml-3">search</i>

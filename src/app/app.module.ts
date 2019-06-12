@@ -17,7 +17,7 @@ import { CalanderComponent } from './pages/calander/calander.component';
 import { UsersComponent } from './pages/users/users.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { TaskComponent } from './blocks/task/task.component';
+import { TaskComponent } from './blocks/tasks/task.component';
 import { MessageComponent } from './blocks/message/message.component';
 import { ActivityComponent } from './blocks/activity/activity.component';
 import { BlockHeaderComponent } from './blocks/block-header/block-header.component';

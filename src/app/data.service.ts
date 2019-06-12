@@ -22,15 +22,15 @@ const user={
   tasks:[
     {
       id:11,
-      txt:'new site for Symo.com',
+      msg:'new site for Symo.com',
       date:1560256719206,
     },{
       id:12,
-      txt:'new logo for yossi',
+      msg:'new logo for yossi',
       date:1560277719206,
     },{
       id:14,
-      txt:'free business PSD Template',
+      msg:'free business PSD Template',
       date:1560256754206,
     },
   ],
@@ -50,15 +50,14 @@ const user={
       img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
       msg:'good mornin! you are fired!!',
       date:1560999919206,
-    },, {
+    },{
       from:'Noam turbo',
       img:'https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg',
       msg:'when will you be here?',
       date:1560993211206,
     },
   ],
-  ctivities:[
-    [
+  activities:[
       {
         from:'Nina Jones',
         img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
@@ -85,5 +84,4 @@ const user={
         date:1560991777206,
       },
     ]
-  ]
 }
