@@ -1,22 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
+import {User} from './models/tutorial.model'
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  initUser(){
-    return user
-  }
   getUser(){
     return user
   }
 }
 
-const user={
+const user:User={
   name: 'John',
   img:'https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg',
   tasks:[

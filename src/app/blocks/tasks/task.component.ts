@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-
+import {Task } from '../../models/tutorial.model'
 @Component({
   selector: 'app-task',
   template: `
@@ -29,7 +29,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./tasks.component.scss']
 })
 export class TaskComponent implements OnInit {
-  @Input()  tasks: Array<object>;
+  @Input()  tasks: Task[];
 
   constructor() { }
 

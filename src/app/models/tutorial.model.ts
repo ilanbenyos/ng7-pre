@@ -1,12 +1,14 @@
-export interface Tutorial {
-  name: string;
-  url: string;
+
+export interface Task {
+  id: number;
+  msg: string;
+  date: number;
 }
 
 export interface User {
   name: string;
   messages: Array<object>;
   activities: Array<object>;
-  tasks: Array<object>;
-
+  img: string;
+  tasks: Array<Task>;
 }

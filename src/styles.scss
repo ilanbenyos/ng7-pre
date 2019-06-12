@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 
 body, html {
   height: 100%;
@@ -33,7 +35,7 @@ a {
 .icon-badge{
   position:absolute;
 }
-.avatar{
+.avatar, .header-avatar{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +43,7 @@ a {
   height: 3rem;
   width: 3rem;
   color:white;
-  overflow: hidden;
+  //overflow: hidden;
   &.avatar-small{
     height: 2rem;
     width: 2rem;
@@ -52,6 +54,10 @@ a {
     max-height:100%;
 
   }
+}
+.header-avatar{
+  justify-content: normal;
+
 }
 
 .block-border{
