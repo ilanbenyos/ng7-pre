@@ -12,8 +12,8 @@ import { AppState } from './app.state';
              (emitter)="toggleNav()"
              [isNav]='isNav'
              ></app-nav>
-    <app-header (emitter)="toggleNav()" [user]="user" class="position-fixed w-100"></app-header>
-    <div class="app-page p-4">
+    <app-header (emitter)="toggleNav()" [user]="user" class="position-fixed w-100 z-index-1"></app-header>
+    <div class="app-page">
       <router-outlet></router-outlet>
     </div>
   `,

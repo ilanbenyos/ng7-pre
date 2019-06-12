@@ -4,17 +4,20 @@ import {Store} from '@ngrx/store';
 @Component({
   selector: 'app-header',
   template:`
-  <div class="header py-4 px-5 d-flex justify-content-between block-border">
+  <div class="header py-4 px-header d-flex justify-content-between block-border">
     <div class="left d-flex align-items-center">
       <i class="material-icons rol-btn" (click)="toggleNav()">menu</i>
       <i class="material-icons rol-btn ml-3">search</i>
     </div>
     <div class="rigth d-flex align-items-center justify-content-center" *ngIf="user">
-      <div class="btn text-white py-2 px-3 mr-4 font-weight-bold rol-btn d-flex align-items-center justify-content-center">
+      <div class="btn text-white py-2 px-3 mr-4 font-weight-bold rol-btn align-items-center justify-content-center d-none d-sm-flex">
         <i class="material-icons rol-btn mr-2 opacity-05">add</i>
-        Add project
+        <span>Add project</span>
       </div>
-      <div class="email d-inline-block position-relative">
+      <div class="add-project d-inline-block d-sm-none">
+        <i class="material-icons rol-btn ml-3">add</i>
+      </div>
+        <div class="email d-inline-block position-relative">
         <i class="material-icons rol-btn ml-3">email</i>
         <span class="icon-badge badge ">{{user.messages.length}}</span>
       </div>

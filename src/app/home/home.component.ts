@@ -8,15 +8,15 @@ import {Store} from "@ngrx/store";
     <div class="home d-flex flex-column mb-4" *ngIf="user">
       <h1 class="mb-3 font-weight-bold">Hello {{user.name}}!</h1>
       <section class="graph d-flex mb-4">
-        <div class="sales bg-primary block-border"></div>
-        <div class="reports bg-success block-border ml-4"></div>
+        <div class="sales graph-section bg-primary block-border"></div>
+        <div class="reports graph-section bg-success block-border"></div>
 
       </section>
-      <section class="boxes d-flex justify-content-between">
+      <section class="boxes justify-content-between row">
 
-        <app-task [tasks]="user.tasks" class="block "></app-task>
-        <app-message [msgs]="user.messages" class="block"></app-message>
-        <app-activity [activities]="user.activities" class="block"></app-activity>
+        <app-task [tasks]="user.tasks" class="block col-sm"></app-task>
+        <app-message [msgs]="user.messages" class="block col-sm"></app-message>
+        <app-activity [activities]="user.activities" class="block col-sm"></app-activity>
 
       </section>
     </div>

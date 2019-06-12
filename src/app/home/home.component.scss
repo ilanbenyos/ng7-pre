@@ -22,18 +22,39 @@ ul {
   }
 }
 
-section{
-  height:20rem;
+.graph-section{
+  height:20rem
 }
 .reports{
   flex-grow: 2;
+  margin-left:1rem;
  }
 .sales{
   flex-grow: 1;
  }
 .block{
   width:32%;
-}
-.boxes{
 
+}
+@media (max-width: 768px) {
+  h1{
+    text-align: center;
+  }
+  .block{
+    width:50%;
+    margin-top:1rem;
+  }
+  .graph{
+    flex-direction: column;
+    height:unset;
+    .reports{
+      margin-top:1rem;
+      margin-left: unset;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .block{
+    width:100%;
+  }
 }

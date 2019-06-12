@@ -1,5 +1,10 @@
 .app-page{
-  margin-bottom:4rem;
+  margin-bottom:1rem;
   margin-top:6rem;
+  padding: 1.5rem;
+  @media (max-width: 576px) {
+    padding-left:.5rem;
+    padding-right:.5rem;
+  }
 }
 
