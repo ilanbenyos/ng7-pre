@@ -23,15 +23,15 @@ const user={
     {
       id:11,
       msg:'new site for Symo.com',
-      date:1560256719206,
+      date:1560394336794,
     },{
       id:12,
       msg:'new logo for yossi',
-      date:1560277719206,
+      date:1560333062818,
     },{
       id:14,
       msg:'free business PSD Template',
-      date:1560256754206,
+      date:1500004179699,
     },
   ],
   messages:[
@@ -49,12 +49,12 @@ const user={
       from:'Dave solomon',
       img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
       msg:'good mornin! you are fired!!',
-      date:1560999919206,
+      date:1560330665151,
     },{
       from:'Noam turbo',
       img:'https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg',
       msg:'when will you be here?',
-      date:1560993211206,
+      date:1560330690151,
     },
   ],
   activities:[
@@ -75,13 +75,13 @@ const user={
         img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
         msg:'uploaded vids & pics',
         action:'ended today!',
-        date:1560991333206,
+        date:1560330611151,
       },{
         from:'Jones Dave',
         img:'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg',
         msg:'started a new position',
         action:'at wix.com',
-        date:1560991777206,
+        date:1560330690151,
       },
     ]
 }

@@ -21,6 +21,7 @@ import { TaskComponent } from './blocks/tasks/task.component';
 import { MessageComponent } from './blocks/message/message.component';
 import { ActivityComponent } from './blocks/activity/activity.component';
 import { BlockHeaderComponent } from './blocks/block-header/block-header.component';
+import { GetTimeAgoPipe } from './get-time-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BlockHeaderComponent } from './blocks/block-header/block-header.compone
     TaskComponent,
     MessageComponent,
     ActivityComponent,
-    BlockHeaderComponent
+    BlockHeaderComponent,
+    GetTimeAgoPipe
   ],
   imports: [
     BrowserModule,
