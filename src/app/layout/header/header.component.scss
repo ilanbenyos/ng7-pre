@@ -18,6 +18,8 @@
   }
   .avatar{
     justify-content: unset;
+    overflow: unset;
+
   }
   .avatar::after {
     display: inline-block;

@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-block-header',
   template: `
-    <div class="header p-3 d-flex justify-content-between block-border-bottom">
+    <div class="header p-3 d-flex justify-content-between block-border bg-white">
       <div class="font-sm font-weight-bold">{{title}}</div>
       <div class="counts d-flex">
         <div class="success-avatar avatar avatar-small bg-primary" *ngIf="successCount">{{successCount}}</div>

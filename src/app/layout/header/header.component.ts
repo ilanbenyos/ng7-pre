@@ -9,8 +9,11 @@ import {Store} from '@ngrx/store';
       <i class="material-icons rol-btn" (click)="toggleNav()">menu</i>
       <i class="material-icons rol-btn ml-3">search</i>
     </div>
-    <div class="rigth d-flex align-items-center" *ngIf="user">
-      <div class="btn h6 text-white py-1 px-3 mr-4 font-weight-bold rol-btn">+ Add project</div>
+    <div class="rigth d-flex align-items-center justify-content-center" *ngIf="user">
+      <div class="btn text-white py-2 px-3 mr-4 font-weight-bold rol-btn d-flex align-items-center justify-content-center">
+        <i class="material-icons rol-btn mr-2 opacity-05">add</i>
+        Add project
+      </div>
       <div class="email d-inline-block position-relative">
         <i class="material-icons rol-btn ml-3">email</i>
         <span class="icon-badge badge ">{{user.messages.length}}</span>

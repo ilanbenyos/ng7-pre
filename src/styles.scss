@@ -43,7 +43,7 @@ a {
   height: 3rem;
   width: 3rem;
   color:white;
-  //overflow: hidden;
+  overflow: hidden;
   &.avatar-small{
     height: 2rem;
     width: 2rem;
@@ -55,13 +55,11 @@ a {
 
   }
 }
-.header-avatar{
-  justify-content: normal;
-
-}
 
 .block-border{
-  border:1px solid lavender;
+  border-right:1px solid lavender;
+  border-left:1px solid lavender;
+  border-top:1px solid lavender;
 }
 .block-border-bottom{
   border-bottom:1px solid lavender;
@@ -81,7 +79,7 @@ a {
   flex-grow: 2;
 }
 
-.font-xm{
+.font-xs{
   font-size:.75rem;
 }
 .font-sm{
@@ -95,4 +93,10 @@ a {
 
 .text-secondary1{
   color:darkgray;
+}
+.opacity-05{
+  opacity:.5;
+}
+.list-group-item{
+  height: 80px;
 }

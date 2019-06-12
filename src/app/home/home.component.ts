@@ -5,7 +5,7 @@ import {Store} from "@ngrx/store";
 @Component({
   selector: 'app-home',
   template:`
-    <div class="home d-flex flex-column" *ngIf="user">
+    <div class="home d-flex flex-column mb-5 " *ngIf="user">
       <h1 >Hello {{user.name}}</h1>
       <section class="graph d-flex mb-4">
         <div class="sales bg-primary block-border"></div>
@@ -14,9 +14,9 @@ import {Store} from "@ngrx/store";
       </section>
       <section class="boxes d-flex justify-content-between">
 
-        <app-task [tasks]="user.tasks" class="block block-border"></app-task>
-        <app-message [msgs]="user.messages" class="block block-border"></app-message>
-        <app-activity [activities]="user.activities" class="block block-border"></app-activity>
+        <app-task [tasks]="user.tasks" class="block "></app-task>
+        <app-message [msgs]="user.messages" class="block"></app-message>
+        <app-activity [activities]="user.activities" class="block"></app-activity>
 
       </section>
     </div>
