@@ -38,8 +38,9 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
+  height: 3rem;
+  width: 3rem;
+  color:white;
   &.avatar-small{
     height: 2rem;
     width: 2rem;
@@ -54,4 +55,32 @@ a {
 .block-border{
   border:1px solid lavender;
 }
+.block-border-bottom{
+  border-bottom:1px solid lavender;
+}
+.dots-3:after {
+    content: '\2807';
+    font-size: 2rem;
+  }
 
+.flex-grow-1{
+  flex-grow: 1;
+}
+.flex-shrink-0{
+  flex-shrink: 0;
+}
+.flex-grow-2{
+  flex-grow: 2;
+}
+
+.font-xm{
+  font-size:.75rem;
+}
+.font-sm{
+  font-size:1rem;
+}
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

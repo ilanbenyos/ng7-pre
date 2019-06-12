@@ -7,7 +7,7 @@ import {Store} from "@ngrx/store";
   template:`
     <div class="home d-flex flex-column" *ngIf="user">
       <h1 >Hello {{user.name}}</h1>
-      <section class="graph d-flex mb-3">
+      <section class="graph d-flex mb-4">
         <div class="sales bg-primary block-border"></div>
         <div class="reports bg-success block-border ml-4"></div>
 
