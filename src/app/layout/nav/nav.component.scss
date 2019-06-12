@@ -1,6 +1,8 @@
 @import '../../../variables';
 
 .nav-app {
+  z-index: 1;
+
   .overlay {
     display: none;
     position: fixed;
@@ -56,5 +58,8 @@
       }
     }
   }
-
+  a:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
 }

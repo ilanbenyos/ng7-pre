@@ -20,7 +20,7 @@ import {Component, Input, OnInit} from '@angular/core';
         <div class="from font-weight-bold">{{msg.from}}</div>
         <div class="date ml-2 text-secondary font-weight-light">{{msg.date | getTimeAgo}}</div>
        </div>
-        <div class="msg truncate">{{msg.msg}}</div>
+        <span class="txt-msg truncate">{{msg.msg}}</span>
         <div class="bottom">
           <i class="material-icons font-xs rol-btn text-secondary">settings</i>
           <i class="material-icons font-xs rol-btn ml-2 text-secondary">reply</i>

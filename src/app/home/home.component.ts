@@ -5,8 +5,8 @@ import {Store} from "@ngrx/store";
 @Component({
   selector: 'app-home',
   template:`
-    <div class="home d-flex flex-column mb-5 " *ngIf="user">
-      <h1 >Hello {{user.name}}</h1>
+    <div class="home d-flex flex-column mb-4" *ngIf="user">
+      <h1 class="mb-3 font-weight-bold">Hello {{user.name}}!</h1>
       <section class="graph d-flex mb-4">
         <div class="sales bg-primary block-border"></div>
         <div class="reports bg-success block-border ml-4"></div>

@@ -10,14 +10,15 @@ import {Component, Input, OnInit} from '@angular/core';
     >
     </app-block-header>
     <div class="list-group">
-      <div class="activity d-flex justify-content-between align-items-center list-group-item" *ngFor="let activity of activities ; let i = index">
-        <div class="left  p-3 ">
-          <div [ngClass]="['vr', i===0? '':'up', i===activities.length?'':'down']"></div>
-          <div class="avatar flex-shrink-0">
+      <div class="activity d-flex justify-content-between align-items-center list-group-item " 
+           *ngFor="let activity of activities ; let i = index">
+        <div class="left ml-3 position-relative">
+          <div class="vr" *ngIf="i>0"></div>
+          <div class="avatar flex-shrink-0 ">
             <img [src]="activity.img">
           </div>
         </div>
-        <div class="main  p-3  font-xs ml-2 d-flex flex-column flex-grow-1">
+        <div class="main  font-xs ml-2 d-flex flex-column flex-grow-1">
           <span class="upper truncate">
             <span class="from font-weight-bold">{{activity.from}}</span>
             <span class="action ml-1">{{activity.action}}</span>
@@ -29,10 +30,7 @@ import {Component, Input, OnInit} from '@angular/core';
             <span class="date ml-2" >{{activity.date | getTimeAgo}}</span>
           </span>
       </div>
-        
-      
-      
-      
+      </div>
     </div>
   `,
   styleUrls: ['./activity.component.scss']

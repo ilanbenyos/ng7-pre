@@ -40,8 +40,8 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 2.7rem;
+  width: 2.7rem;
   color:white;
   overflow: hidden;
   &.avatar-small{
@@ -99,4 +99,11 @@ a {
 }
 .list-group-item{
   height: 80px;
+}
+
+.block{
+  .list-group-item:first-child{
+    border-top-left-radius: 0;
+    border-top-right-radius:0;
+  }
 }
