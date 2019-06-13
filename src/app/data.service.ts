@@ -19,7 +19,7 @@ const user:User={
     {
       id:11,
       msg:'new site for Symo.com',
-      date:1560394336794,
+      date:1560508151493,
     },{
       id:12,
       msg:'new logo for yossi',
@@ -27,7 +27,7 @@ const user:User={
     },{
       id:14,
       msg:'free business PSD Template',
-      date:1500004179699,
+      date:1555004179699,
     },
   ],
   messages:[
@@ -59,7 +59,7 @@ const user:User={
         img:'https://uploads.guim.co.uk/2017/10/06/Arwa_Mahdawi,_L.png',
         msg:'free ui kit',
         action:'commented project',
-        date:1560995419206,
+        date:1560508151493,
       },{
         from:'Noam turbo',
         img:'https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg',

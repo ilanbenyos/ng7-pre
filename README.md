@@ -15,6 +15,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 then you can run it localy by `serve dist/ng7-pre` that will open port for:
  http://localhost:5000 │ http://10.0.0.27:5000
+to upload github pages:
+ng build --prod --base-href https://github.com/ilanbenyos/ng7-pre.git
 
 ## Running unit tests
 

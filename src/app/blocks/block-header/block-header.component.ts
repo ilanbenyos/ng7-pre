@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
       <div class="font-sm font-weight-bold d-flex align-items-center">{{title}}</div>
       <div class="counts d-flex">
         <div class="success-avatar avatar avatar-small bg-primary" *ngIf="successCount">{{successCount}}</div>
-        <div class="error-avatar avatar avatar-small ml-2 bg-danger" *ngIf="errorCount">{{errorCount}}</div>
+        <div class="error-avatar avatar avatar-small ml-2 bg-danger-1" *ngIf="errorCount">{{errorCount}}</div>
       </div>
     </div>
   
