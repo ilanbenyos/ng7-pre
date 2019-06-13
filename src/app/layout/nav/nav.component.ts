@@ -3,7 +3,7 @@ import { Component, OnInit,  EventEmitter, Input, Output  } from '@angular/core'
 @Component({
   selector: 'app-nav',
   template:`
-    <div class="nav-app position-fixed">
+    <div class="nav-app position-fixed z-index-2">
       <div class="overlay" 
            (click)="toggleNav()" 
            [ngClass]="isNav ? 'is-nav': ''">{{isNav}}
